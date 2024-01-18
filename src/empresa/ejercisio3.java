@@ -1,24 +1,35 @@
 package empresa;
 // aqui tenemos un paquete que lo llamamos  empresa
 import java.util.Scanner;
+import java.time.LocalDateTime;
 //importamos  scaner para que leea los  datos
+import java.time.format.DateTimeFormatter;
+
 public class ejercisio3 {
    //aqui ponemos como publica la clase ejercisio3 la cual vamso a utilizar para 
    //realizar el menu
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         //este es  el metodo principal aqui iniciaremos la app
         Scanner scanner = new Scanner(System.in);
-        //aqui creamos un objeto scanner este ase  que leean los datos del usuario
+        DateTimeFormatter.ofPattern("yyyy-MM-dd");
         gestor gestor = new gestor();
-        //creamos  el objeto gestor ps para gestioar los puestos y tambien las incidencias
+        //creamos  el objeto gestor ps para gestioar los puestos y tambien las  incidencias
         while (true) {
             //aqui usamos un while mientras sea verdad ps  se  imorimiera lo siguiente
+            System.out.println("--------------------------------------");
+            LocalDateTime now = LocalDateTime.now();
+            System.out.printf("Fecha y hora actual%s%n", now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+            System.out.println("--------------------------------------");
             System.out.println("\nSelecciona una opción:");
-            System.out.println("1. Añadir puesto");
-            System.out.println("2. Añadir incidencia");
-            System.out.println("3. Listar incidencias por puesto");
-            System.out.println("4. Salir");
+            System.out.println("--------------------------------------");
+            System.out.println("1. -.Añadir puesto");
+            System.out.println("2. -.Añadir incidencia");
+            System.out.println("3. -.Listar incidencias por puesto");
+            System.out.println("4. -.Salir");
             //aqui tenemos lo que en teoria se mostraria como menu princupal bueno 
             //con las opciones que hay 
 
@@ -48,7 +59,8 @@ public class ejercisio3 {
                     //lee el salto de linea que pasa ala siguiente linea ?¿
                     String incidenciaPuestoName = scanner.nextLine();
                     //coge el puesto donde se ah producido la incidencia
-                    puesto incidenciaPuesto = gestor.getpuesto(incidenciaPuestoName);
+                    puesto incidenciaPuesto =       
+                     gestor.getpuesto(incidenciaPuestoName);
                     // se pone el puesto al que se kiere agregar la incidencia
                     if (incidenciaPuesto == null) {
                         //aqui con el if si no ay incidencia  valor nulo

@@ -82,7 +82,6 @@ public class puesto {
 
     public void addincidencia(incidencia incidencia) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addincidencia'");
+    throw new UnsupportedOperationException("Unimplemented method'addincidencia'");
     }
-    
 }

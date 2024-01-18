@@ -1,5 +1,4 @@
 package empresa;
-//aqui tenemos el paquete empresa
 
 public class incidencia {
     //definimos la clase incidencia
@@ -26,9 +25,7 @@ public class incidencia {
         //incidencia con los parametros ?¿
     }
 
-    public incidencia(String incidenciaDescription, puesto numincidecia, int i) {
-        //TODO Auto-generated constructor stub
-    }
+    
 
     public String getDescripcion() {
         return descripcion;
