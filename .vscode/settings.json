@@ -3,5 +3,10 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.colorDecoratorsActivatedOn": "hover",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "debug.autoExpandLazyVariables": true
 }
