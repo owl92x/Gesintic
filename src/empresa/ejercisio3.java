@@ -18,18 +18,23 @@ public class ejercisio3 {
         DateTimeFormatter.ofPattern("yyyy-MM-dd");
         gestor gestor = new gestor();
         //creamos  el objeto gestor ps para gestioar los puestos y tambien las  incidencias
+        System.out.println("------------------------------------------------");
+        System.out.println("¡Hola, introduce los datos, DAW!");
+        System.out.println("------------------------------------------------");
+
         while (true) {
             //aqui usamos un while mientras sea verdad ps  se  imorimiera lo siguiente
-            System.out.println("--------------------------------------");
+            System.out.println("--------------------------------------------");
             LocalDateTime now = LocalDateTime.now();
             System.out.printf("Fecha y hora actual%s%n", now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-            System.out.println("--------------------------------------");
+            System.out.println("--------------------------------------------");
             System.out.println("\nSelecciona una opción:");
-            System.out.println("--------------------------------------");
-            System.out.println("1. -.Añadir puesto");
-            System.out.println("2. -.Añadir incidencia");
-            System.out.println("3. -.Listar incidencias por puesto");
-            System.out.println("4. -.Salir");
+            System.out.println("--------------------------------------------");
+            System.out.println("    1. - .Añadir puesto                     ");
+            System.out.println("    2. - .Añadir incidencia                 ");
+            System.out.println("    3. - .Listar incidencias por puesto"     );
+            System.out.println("    4. - .Salir                             ");
+            System.out.println("--------------------------------------------");
             //aqui tenemos lo que en teoria se mostraria como menu princupal bueno 
             //con las opciones que hay 
 
@@ -40,7 +45,9 @@ public class ejercisio3 {
                 //este  switch es para poner un puesto nuevo  op1
                 case 1:
                 //aqui es el primer caso
+                     System.out.println("--------------------------------------");
                     System.out.println("Introduce el nombre del puesto:");
+                    System.out.println("--------------------------------------");
                     //aqui pedimos  el puesto al usuario
                     scanner.nextLine();
                     //lee el salto de linea que pasa ala siguiente linea ?¿
@@ -53,7 +60,9 @@ public class ejercisio3 {
                     break;
                 case 2:
                 // este seria el segundo caso
+                    System.out.println("--------------------------------------");
                     System.out.println("Introduce el nombre del puesto de la incidencia:");
+                    System.out.println("--------------------------------------");
                     // seria si el usuario coge la opcion2  se añadiria una nueva incidencia 
                     scanner.nextLine();
                     //lee el salto de linea que pasa ala siguiente linea ?¿
@@ -64,12 +73,16 @@ public class ejercisio3 {
                     // se pone el puesto al que se kiere agregar la incidencia
                     if (incidenciaPuesto == null) {
                         //aqui con el if si no ay incidencia  valor nulo
+                        System.out.println("--------------------------------------");
                         System.out.println("No existe ningún puesto con ese nombre.");
+                        System.out.println("--------------------------------------");
                         // aqui. imprime  que no ahy ningun puesto con ese nombre 
                         break;//con esto ponemos una opcion que nos dejaria salir de una sentencia 
                         //etiquetada
                     }
+                    System.out.println("------------------------------------------");
                     System.out.println("Introduce la descripción de la incidencia:");
+                    System.out.println("------------------------------------------");
                     //aqui introducimos la descripcion de la incidencia
                     String incidenciaDescription = scanner.nextLine();
                     //lee la descripcion de la incidencia
@@ -80,7 +93,9 @@ public class ejercisio3 {
                     break;//con esto ponemos una opcion que nos dejaria salir de una sentencia 
                     //etiquetada
                 case 3://caso3
+                    System.out.println("------------------------------------------");
                     System.out.println("Introduce el nombre del puesto:");
+                    System.out.println("------------------------------------------");
                     //pide el nombre del puesto
                     scanner.nextLine();
                     //lee el salto de linea que  baja a otra linea
@@ -90,12 +105,16 @@ public class ejercisio3 {
                     // aqui llamar al gestor  y del gestor obtiene el puesto 
                     if (listPuesto == null) {
                         // caso contrario si no  ps devolvera un valor nulo
+                        System.out.println("---------------------------------------");
                         System.out.println("No existe ningún puesto con ese nombre.");
+                        System.out.println("---------------------------------------");
                         //entonces imprime  el mesaje
                         break;//con esto ponemos una opcion que nos dejaria salir de una sentencia 
                         //etiquetada
                                     }
+                    System.out.println("--------------------------------------------");
                     System.out.println("Incidencias del puesto " + listPuestoName + ":");
+                    System.out.println("--------------------------------------------");
                     //aqui imprime el nombre del puesto y la palabra incidencias
                     for (incidencia Incidencia : listPuesto.getincidencias()) {
                         // recorre las incidencias del puesto 
@@ -106,12 +125,15 @@ public class ejercisio3 {
                     //etiquetada
                 case 4:
                 // caso 4
+                    System.out.println("¡Hasta luego!");
                     scanner.close();
                     //cierra el scanner para no tener errores
                     return;
                     // retorna bueno saldria del metodo main
                 default:
+                System.out.println("--------------------------------------");
                     System.out.println("Opción no válida.");
+                System.out.println("--------------------------------------");
                     // si la opcion no es valida  imprimira este mensaje
             }
         }

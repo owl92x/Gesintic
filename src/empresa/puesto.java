@@ -6,6 +6,7 @@ public class puesto {
     private String nombre;
     private String localizacion;
     private String id;
+
     //definomos estos atributos con el tipo string(entonces esto representa una cadena alfanumerica de una valor constante
     //que no puede ser cambianda despues de  haber sido creada
 
@@ -17,6 +18,9 @@ public class puesto {
         //asignamos valores de los argumentos a los atributos correspondientes
     }
 
+    /**
+     * @param listPuestoName
+     */
     public puesto(String listPuestoName) {
         //TODO Auto-generated constructor stub
     }
@@ -75,13 +79,14 @@ public class puesto {
     
 
     public incidencia[] getincidencias() {
+        return null;
         // el metodo publico incidencias devuelve el arrego  de las instacias  de la clase incidencia asociadas alas instacia case  de la clase puesto 
         //este es un metodo que no emos implemntado  lo tenemos como autogenerado por un error de compilacion 
-        throw new UnsupportedOperationException("Unimplemented method 'getincidencias'");
+       //throw new UnsupportedOperationException("Unimplemented method 'getincidencias'");
     }
 
     public void addincidencia(incidencia incidencia) {
         // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method'addincidencia'");
+    //throw new UnsupportedOperationException("Unimplemented method'addincidencia'");
     }
 }
